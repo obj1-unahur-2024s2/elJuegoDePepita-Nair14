@@ -1,14 +1,19 @@
+import extras.*
 import wollok.game.*
 
 object manzana {
 
-	//Completar
+	var property position = game.origin()
+	method image() = "manzana.png" 
+	method siguiente() = alpiste
 
 }
 
 object alpiste {
 
-	// Completar
+	var property position = game.origin()
+	method image() = "alpiste.png" 
+	method siguiente() = silvestre
 
 }
 

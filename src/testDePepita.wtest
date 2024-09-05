@@ -1,0 +1,24 @@
+import pepita.*
+
+test "pepita inicia con energia 100" {
+    assert.equals(100, pepita.energia())
+  
+}
+
+test "pepita queda con 91 de energia al volar 1km" {
+    pepita.vola(1)
+    assert.equals(100 - 1*9, pepita.energia())
+  
+}
+
+test "pepita no esta cansada despues de volar 1km" {
+    pepita.vola(1)
+    assert.notThat(pepita.estaCansada())
+  
+}
+
+test "pepita esta cansada despues de volar 100km" {
+    pepita.vola(100)
+    assert.that(pepita.estaCansada())
+    assert.equals(0, pepita.energia())
+}
